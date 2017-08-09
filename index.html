@@ -8,12 +8,17 @@
 </head>
 <body>
   <center>
-  <h1 style="font:cursive;font-size:70px;margin-top:60px;">TURBO TRAIN</h1>
-  <img src="./train.png" style="width:900px;margin-top:80px;">*insert train here*</img>
+  <h1 style="font-family:cursive;font-size:82px;margin-top:60px;" id="title">TURBO TRAIN</h1>
+  <img src="./train.png" style="width:900px;margin-top:80px;color:" id="train" />
   </center>
   <script>
     // do some wacky stuff to the page
-    
+    var title = document.getElementById('title');
+	var train = document.getElementById('train');
+	var colors = ['rgb(255,0,0)','rgb(0,255,0)','rgb(0,0,255)','rgb(255,255,0)','rgb(255,0,255)','rgb(0,255,255)','rgb(255,128,0)'];
+	setInterval(function(){
+		title.style.color = colors[Math.floor(Math.random()*colors.length)];
+	},150);
   </script>
 </body>
 </html>
